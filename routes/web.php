@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PDFController;
+use App\Http\Controllers\EditorController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,3 +22,8 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 
 Route::get('/generate-pdf', [PDFController::class, 'generatePDF'])->name('generate.pdf');
+
+
+
+Route::get('/editor', [EditorController::class, 'showEditor']);
+Route::post('/editor/save', [EditorController::class, 'saveContent'])->name('editor.save');

@@ -7,7 +7,7 @@
     <title>Home Page</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        .pdf-button {
+        .pdf-button, .editor-button {
             display: inline-block;
             padding: 10px 20px;
             font-size: 16px;
@@ -17,9 +17,10 @@
             border-radius: 5px;
             text-decoration: none;
             transition: background-color 0.3s;
+            margin-right: 10px; /* Space between buttons */
         }
 
-        .pdf-button:hover {
+        .pdf-button:hover, .editor-button:hover {
             background-color: #0056b3;
         }
     </style>
@@ -31,8 +32,9 @@
     <!-- Chart Container -->
     <canvas id="myChart" width="400" height="200"></canvas>
 
-    <!-- Button to generate PDF -->
+    <!-- Buttons to generate PDF and open the editor -->
     <a href="{{ route('generate.pdf') }}" class="pdf-button">Generate PDF</a>
+    <a href="{{ url('/editor') }}" class="editor-button">Open Editor</a> <!-- Link to the editor -->
 
     <script>
         // Chart.js code...
