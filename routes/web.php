@@ -18,6 +18,11 @@ use App\Http\Controllers\EditorController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/graf', function () {
+    return view('graf');
+});
+
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 
