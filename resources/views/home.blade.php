@@ -60,6 +60,9 @@
           <div class="container-fluid container-fluid1 css-selector animace  h-75">
           <div class="wrapper">        
          <h2 class="section-title">CykloWeb</h2>
+         @auth
+            <h1>Vítaj {{ Auth::user()->name }}!</h1>
+         @endauth
          </div>
          </div>
          </section>
