@@ -1,9 +1,10 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\PDFController;
-use App\Http\Controllers\EditorController;
+use App\Http\Controllers\NoteController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,20 +16,51 @@ use App\Http\Controllers\EditorController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+Route::get('/notes', [NoteController::class, 'index']);
+
 
 Route::get('/graf', function () {
     return view('graf');
 });
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
-
 
 Route::get('/generate-pdf', [PDFController::class, 'generatePDF'])->name('generate.pdf');
 
 
+Route::get("/editor", function() {
+    return view("editor");
+});
 
-Route::get('/editor', [EditorController::class, 'showEditor']);
-Route::post('/editor/save', [EditorController::class, 'saveContent'])->name('editor.save');
+Route::post('/editor', [TextController::class, 'store'])->name('texts.store');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Route::get('/', function () {
+    return view('home');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__.'/auth.php';

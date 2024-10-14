@@ -18,9 +18,7 @@
   
       <nav class="navbar navbar-expand-lg bg-dark fixed-top">
           <div class="container-fluid">
-              <a class="navbar-brand left" href="#HOME">
-                  <img src="#" width="70px" height="70px" alt="logo">
-              </a>
+            
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarul" aria-controls="navbarul" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
               </button>
@@ -39,11 +37,11 @@
                         <a  href="{{ route('generate.pdf') }}" class="pdf-button nav-link">Generate PDF</a>
                       </li>
                       <li class="nav-item">
-                        <a href="{{ url('/editor') }}" class="editor-button nav-link">Open Editor</a> <!-- Link to the editor -->
+                        <a href="{{ url('/editor') }}" class="editor-button nav-link">Open Editor</a>
                       </li>
                       @auth
                       <li class="mx-2 nav-item">
-                        <button onclick="location.href='/tq'" class="btn btn-primary">Dashboard</button>
+                        <button onclick="location.href='/dashboard'" class="btn btn-primary">Dashboard</button>
                       </li>
   
                       <li class="nav-item">
@@ -59,15 +57,14 @@
       </nav>
       
       <section class="senction" id="HOME">
-          <div class="container-fluid container-fluid1 css-selector animace  h-100">
+          <div class="container-fluid container-fluid1 css-selector animace  h-75">
           <div class="wrapper">        
          <h2 class="section-title">CykloWeb</h2>
-         <p class="section-info">Počky to je sport?</p>
          </div>
          </div>
          </section>
       
-  <section class="section-categories diagonal" style="margin-bottom:8rem; margin-top:5rem;" id="CATEGORIES">
+  <section class="section-categories diagonal" style="margin-bottom:8rem; margin-top:10rem;" id="CATEGORIES">
           <div class="container">
           <h1 class="site-title white" style="margin-bottom:8rem;">Categories</h1>
           <div class="wrapper wrapper2">
@@ -111,33 +108,7 @@
   
   </div>
   
-  <div class="container py-4" id="ABOUT US" style="margin-top:25rem;" data-aos="zoom-in-up" data-aos-duration="500">
-      <div class="p-5 mb-4 rounded-3" style="background-image:linear-gradient(46deg, #ff0000, #ffe000);">
-        <div class="py-5 container-fluid">
-          <h1 class="display-5 fw-bold">About us</h1>
-          <p class="col-md-8 fs-4">With over a decade of experience in the market, we have earned the trust of thousands of satisfied customers through our commitment to providing quality products and excellent service. We specialize in the latest technologies and trends in mobile phones, tablets, computers and accessories such as handsets and smart watches.</p>
-        </div>
-      </div>
   
-      <div class="row align-items-md-stretch">
-        <div class="col-md-6">
-          <div class="p-5 text-white h-100 rounded-3" style="background:#12c2e936;">
-            <h2>Where can you find us?</h2>
-            <p>Galerie Harfa</p>
-            <p>Českomoravská 190 00  Praha 9</p>
-                    
-          </div>
-        </div>
-        <div class="col-md-6 zkrek">
-          <div class="p-5 border h-100 bg-light rounded-3">
-            <h2>Opening hours</h2>
-            <p>Mo - Fr    8:00-20:00</p>
-            <p>Sa - Sn    9:00-19:00</p>
-          </div>
-        </div>
-      </div>
-  
-      
     </div>
       
        <footer>
@@ -185,6 +156,17 @@
           padding-bottom: 10px;
           color: white;
           
+      }
+      @media (min-width: 992px){
+        .navbar-expand-lg .navbar-collapse{
+          display: flex !important;
+          flex-basis: auto;
+          flex-direction:column;
+          flex-wrap:wrap;
+          align-content: center;
+          justify-content: center;
+          align-items: center;
+        }
       }
   
       ul {
@@ -278,7 +260,7 @@
   .container-fluid1{
       display:flex;
       flex-direction: column;
-      align-content: flex-start;
+      align-content: center;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
