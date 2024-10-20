@@ -28,7 +28,7 @@
                         <a class="nav-link" href="/">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/categories">CATEGORIES</a>
+                        <a class="nav-link" href="/location">LOCATIONS</a>
                     </li>
                     <li class="nav-item">
                       <a  href="{{ url('/graf') }}" class="pdf-button nav-link">GRAF!</a>

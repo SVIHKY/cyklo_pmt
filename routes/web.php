@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PDFController;
 use App\Http\Controllers\EditorController;
 use App\Http\Controllers\NoteController;
-
+use App\Http\Controllers\LokaceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +38,9 @@ Route::put('/editor/{id}', [EditorController::class, 'update'])->name('text.upda
 Route::get('/categories', function () {
     return view('categories');
 });
+
+Route::get('/location', [LokaceController::class, 'index']);
+Route::get('/location/{id}', [LokaceController::class, 'show']);
 
 Route::get('/', function () {
     return view('home');
