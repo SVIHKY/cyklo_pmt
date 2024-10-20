@@ -28,7 +28,7 @@
                         <a class="nav-link" href="/">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/location">LOCATIONS</a>
+                        <a class="nav-link" href="/location">FLAGS</a>
                     </li>
                     <li class="nav-item">
                       <a  href="{{ url('/graf') }}" class="pdf-button nav-link">GRAF!</a>
@@ -61,15 +61,15 @@
         <div class="wrapper">        
        <h2 class="section-title">CykloWeb</h2>
        @auth
-          <h1>Vítaj {{ Auth::user()->name }}!</h1>
+          <h2 class="section-info">Vítaj {{ Auth::user()->name }}!</h2>
        @endauth
        </div>
        </div>
        </section>
     
-<section class="section-categories diagonal" style="margin-bottom:8rem; margin-top:10rem;" id="CATEGORIES">
+<section class="section-categories diagonal" style="margin-bottom:8rem; margin-top:10rem;" id="TOUR">
         <div class="container">
-        <h1 class="site-title white" style="margin-bottom:8rem;">Categories</h1>
+        <h1 class="site-title white" style="margin-bottom:8rem;">UCI TOUR TYPES</h1>
         <div class="wrapper wrapper2">
         
         </div>
@@ -118,7 +118,7 @@
     
           <div class="menu">
             <li><a href="#HOME">HOME</a></li>
-            <li><a href="#CATEGORIES">CATEGORIES</a></li>
+            <li><a href="#TOUR">TOUR TYPES</a></li>
         </div>
         <div class="menu">
         <li><a href="/login">admin</a></li>
@@ -231,6 +231,7 @@
 .section-title{
     font-size: 5rem;
     color: white;
+    text-align: center;
 }
 .site-title{
     font-size: 6rem;
@@ -238,7 +239,8 @@
 }
 .section-info{
     color:white;
-    font-size: 20px;
+    font-size: 2rem;
+    text-align: center;
 }
 section{
     padding-block: 5rem;
@@ -380,6 +382,3 @@ footer .menu li a:hover{
 </script>
 </body>
 </html>
-  <!-- Buttons to generate PDF and open the editor -->
-
-

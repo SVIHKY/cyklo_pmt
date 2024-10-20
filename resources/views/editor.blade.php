@@ -33,7 +33,7 @@
                         <a class="nav-link" href="/">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/categories">CATEGORIES</a>
+                        <a class="nav-link" href="/location">FLAGS</a>
                     </li>
                     <li class="nav-item">
                       <a  href="{{ url('/graf') }}" class="pdf-button nav-link">GRAF!</a>
@@ -61,9 +61,9 @@
         </div>\
     </nav>
 
-    <div style="margin-top: 100px; margin-inline: 8rem; color:white; min-height: 75vh;">
+    <div style="margin-top: 100px; margin-inline: 8rem; color:white; min-height: 75vh;" data-aos="fade-in" data-aos-delay="300">
         @auth
-        <div style="text-align: center;">
+        <div style="text-align: center; min-height:500px; max-height: 1200px;">
             <h1>WYSIWYG Editor: </h1>
             <x-forms.tinymce-editor />
         </div>
@@ -77,12 +77,12 @@
             {!! $record->editoros !!}
 
             @auth
-            <a href="{{ route('text.edit', $record->id) }}">Upravit</a>
+            <a href="{{ route('text.edit', $record->id) }}" class="btn btn-outline-light">Upravit</a>
 
                 <form action="{{ route('text.destroy', $record->id) }}" method="POST" style="display:inline;">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" onclick="return confirm('Opravdu chcete tento záznam smazat?');">Smazat</button>
+                    <button type="submit" class="btn btn-outline-light" onclick="return confirm('Opravdu chcete tento zÃ¡znam smazat?');">Smazat</button>
                 </form>
 
             @endauth

@@ -38,15 +38,23 @@
     <table>
         <thead>
             <tr>
-                <th>Krátká poznámka</th>
-                <th>Dlouhá poznámka</th>
+                <th>Jméno</th>
+                <th>Příjmení</th>
+                <th>Země</th>
+                <th>Váha</th>
+                <th>Výška</th>
+                <th>Datum Narození</th>
             </tr>
         </thead>
         <tbody>
             @foreach ($data as $item)
                 <tr>
-                    <td>{{ $item['shortNote'] }}</td>
-                    <td>{{ $item['longNote'] }}</td>
+                    <td>{{ $item['first_name'] }}</td>
+                    <td>{{ $item['last_name'] }}</td>
+                    <td>{{ $item['country'] }}</td>
+                    <td>{{ $item['weight'] }}</td>
+                    <td>{{ $item['height'] }}</td>
+                    <td>{{ $item['date_of_birth'] }}</td>
                 </tr>
             @endforeach
         </tbody>
