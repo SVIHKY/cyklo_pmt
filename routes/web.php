@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PDFController;
+use App\Http\Controllers\EditorController;
 use App\Http\Controllers\NoteController;
 
 
@@ -20,29 +22,16 @@ use App\Http\Controllers\NoteController;
 
 Route::get('/notes', [NoteController::class, 'index']);
 
-
 Route::get('/graf', function () {
     return view('graf');
 });
 
-
 Route::get('/generate-pdf', [PDFController::class, 'generatePDF'])->name('generate.pdf');
 
 
-Route::get("/editor", function() {
-    return view("editor");
-});
-
-Route::post('/editor', [TextController::class, 'store'])->name('texts.store');
-
-
-
-
-
-
-
-
-
+Route::get("/editor", [EditorController::class, 'index'])->name('text.index');
+Route::post('/editor', [EditorController::class, 'store'])->name('text.store');
+Route::delete('/editoros/{id}', [EditorController::class, 'destroy'])->name('editoros.destroy');
 
 
 

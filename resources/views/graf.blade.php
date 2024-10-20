@@ -9,8 +9,9 @@
     <title>Document</title>
 </head>
 <body>
-    <canvas id="myChart" width="400" height="200"></canvas>
 
+
+    <canvas id="myChart" width="400" height="200"></canvas>
 
     <script>
         // Chart.js code...

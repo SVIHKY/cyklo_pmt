@@ -1,4 +1,5 @@
-<form method="post">
-    <textarea id="myeditorinstance">Hello, World!</textarea>
-    <button>Submit</button>
-  </form>
+<form action="{{ route('text.store') }}" method="POST">
+  @csrf
+  <textarea id="myeditorinstance" name="myeditorinstance"></textarea>
+  <button type="submit">Odeslat</button>
+</form>
