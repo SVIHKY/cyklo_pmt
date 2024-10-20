@@ -77,7 +77,9 @@
             {!! $record->editoros !!}
 
             @auth
-                <form action="{{ route('editoros.destroy', $record->id) }}" method="POST" style="display:inline;">
+            <a href="{{ route('text.edit', $record->id) }}">Upravit</a>
+
+                <form action="{{ route('text.destroy', $record->id) }}" method="POST" style="display:inline;">
                     @csrf
                     @method('DELETE')
                     <button type="submit" onclick="return confirm('Opravdu chcete tento záznam smazat?');">Smazat</button>

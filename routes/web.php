@@ -31,9 +31,9 @@ Route::get('/generate-pdf', [PDFController::class, 'generatePDF'])->name('genera
 
 Route::get("/editor", [EditorController::class, 'index'])->name('text.index');
 Route::post('/editor', [EditorController::class, 'store'])->name('text.store');
-Route::delete('/editoros/{id}', [EditorController::class, 'destroy'])->name('editoros.destroy');
-
-
+Route::delete('/editor/{id}', [EditorController::class, 'destroy'])->name('text.destroy');
+Route::get('/editor/{id}/edit', [EditorController::class, 'edit'])->name('text.edit');
+Route::put('/editor/{id}', [EditorController::class, 'update'])->name('text.update');
 
 
 
