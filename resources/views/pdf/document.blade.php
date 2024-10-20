@@ -32,27 +32,27 @@
     <h1>PDF Document</h1>
     
     <!-- Image -->
-    <img src="{{ public_path('images/sample.jpg') }}" alt="Sample Image"> <!-- Ensure the image path is correct -->
+    <img src="{{ public_path('img/doge-foto.jpg') }}" alt="Sample Image"> <!-- Ensure the image path is correct -->
 
     <!-- Table -->
     <table>
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Email</th>
+                <th>Krátká poznámka</th>
+                <th>Dlouhá poznámka</th>
             </tr>
         </thead>
         <tbody>
             @foreach ($data as $item)
                 <tr>
-                    <td>{{ $item['name'] }}</td>
-                    <td>{{ $item['email'] }}</td>
+                    <td>{{ $item['shortNote'] }}</td>
+                    <td>{{ $item['longNote'] }}</td>
                 </tr>
             @endforeach
         </tbody>
     </table>
 
     <!-- Additional Content -->
-    <p>This is some additional content included in the PDF.</p>
+    <p>LOL</p>
 </body>
 </html>

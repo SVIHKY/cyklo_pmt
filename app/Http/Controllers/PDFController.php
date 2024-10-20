@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Note;
 use PDF; // Import the PDF facade
 
 class PDFController extends Controller
@@ -10,11 +11,7 @@ class PDFController extends Controller
     public function generatePDF()
     {
         // Sample data for the table
-        $data = [
-            ['name' => 'John Doe', 'email' => 'john@example.com'],
-            ['name' => 'Jane Smith', 'email' => 'jane@example.com'],
-            ['name' => 'Sam Green', 'email' => 'sam@example.com'],
-        ];
+        $data = Note::all();
 
         // Load the view and pass data
         $pdf = PDF::loadView('pdf.document', compact('data'));
@@ -23,4 +20,3 @@ class PDFController extends Controller
         return $pdf->download('document.pdf');
     }
 }
-
