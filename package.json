@@ -16,7 +16,8 @@
         "vite": "^5.0.0"
     },
     "dependencies": {
-        "chart.js": "^4.4.4"
+        "chart.js": "^4.4.4",
+        "flag-icons": "^7.2.3"
     },
     "name": "cyklo_pmt",
     "version": "1.0.0",
