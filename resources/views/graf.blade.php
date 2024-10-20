@@ -6,15 +6,71 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        /* Změna barvy textu v navbaru na bílou */
+        .navbar-nav .nav-link {
+            color: white !important;
+        }
+
+        /* Další volitelné úpravy pro hover efekt */
+        .navbar-nav .nav-link:hover {
+            opacity: 0.8;
+        }
+    </style>
+
+    <title>Chart with Navbar</title>
 </head>
 <body>
 
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarul" aria-controls="navbarul" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarul">
+                <ul class="navbar-nav ms-auto right font">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/categories">CATEGORIES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url('/graf') }}" class="pdf-button nav-link">GRAF!</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('generate.pdf') }}" class="pdf-button nav-link">Generate PDF</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url('/editor') }}" class="editor-button nav-link">Open Editor</a>
+                    </li>
+                    @auth
+                    <li class="mx-2 nav-item">
+                        <button onclick="location.href='/dashboard'" class="btn btn-primary">Dashboard</button>
+                    </li>
+                    <li class="nav-item">
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <button class="btn btn-danger" type="submit">Logout</button>
+                        </form>
+                    </li>
+                    @endauth
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <canvas id="myChart" width="400" height="200"></canvas>
+    <!-- Main content: Chart -->
+    <div class="container" style="margin-top: 4rem;">
+        <canvas id="myChart" width="400" height="200"></canvas>
+    </div>
 
+    <!-- Chart.js code -->
     <script>
-        // Chart.js code...
         const ctx = document.getElementById('myChart').getContext('2d');
         const myChart = new Chart(ctx, {
             type: 'bar',
@@ -51,6 +107,9 @@
             }
         });
     </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 </body>
 </html>

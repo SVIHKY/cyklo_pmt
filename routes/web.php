@@ -35,8 +35,9 @@ Route::delete('/editor/{id}', [EditorController::class, 'destroy'])->name('text.
 Route::get('/editor/{id}/edit', [EditorController::class, 'edit'])->name('text.edit');
 Route::put('/editor/{id}', [EditorController::class, 'update'])->name('text.update');
 
-
-
+Route::get('/categories', function () {
+    return view('categories');
+});
 
 Route::get('/', function () {
     return view('home');
