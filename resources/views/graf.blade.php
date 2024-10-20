@@ -6,26 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <!-- Bootstrap CSS -->
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <style>
-        /* Změna barvy textu v navbaru na bílou */
+        
         .navbar-nav .nav-link {
             color: white !important;
         }
 
-        /* Další volitelné úpravy pro hover efekt */
+        
         .navbar-nav .nav-link:hover {
             opacity: 0.8;
         }
     </style>
 
-    <title>Chart with Navbar</title>
+    <title>Cycling Statistics Chart</title>
 </head>
 <body>
 
-    <!-- Navbar -->
+    
     <nav class="navbar navbar-expand-lg bg-dark fixed-top">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarul" aria-controls="navbarul" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,7 +64,7 @@
         </div>
     </nav>
 
-    <!-- Main content: Chart -->
+   
     <div class="container" style="margin-top: 4rem;">
         <canvas id="myChart" width="400" height="200"></canvas>
     </div>
@@ -75,10 +75,10 @@
         const myChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                labels: ['Mountain Biking', 'Road Cycling', 'Track Cycling', 'Cyclo-cross', 'BMX', 'Touring'],
                 datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3],
+                    label: 'Number of Participants (in thousands)',
+                    data: [30, 50, 20, 10, 15, 25], 
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
@@ -108,7 +108,7 @@
         });
     </script>
 
-    <!-- Bootstrap JS -->
+  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 </body>

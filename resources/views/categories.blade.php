@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="node_modules/flag-icons/css/flag-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/6.6.6/css/flag-icons.min.css">
 
-    <!-- Bootstrap CSS and other styles -->
+ 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     
     <style>
@@ -31,7 +31,7 @@
             margin-top: 5px;
             font-size: 14px;
         }
-        /* Additional navbar styling */
+       
         .navbar-nav .nav-item .nav-link {
             position: relative;
             padding-bottom: 10px;
@@ -45,7 +45,6 @@
 
 <body>
 
-    <!-- Navbar from the other page -->
     <nav class="navbar navbar-expand-lg bg-dark fixed-top">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarul" aria-controls="navbarul" aria-expanded="false" aria-label="Toggle navigation">
