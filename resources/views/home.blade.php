@@ -53,7 +53,7 @@
                     @endauth
                 </ul>
             </div>
-        </div>\
+        </div>
     </nav>
     
     <section class="senction" id="HOME">
@@ -74,10 +74,10 @@
         
         </div>
         <div class="wrapper wrapper2">
-    <li><a href="">UCI Tour Type</a></li>
-    <li><a href="">_________</a></li>
-    <li><a href="">_________</a></li>
-    <li><a href="">_________</a></li>
+    <li><a href="#">UCI Tour Type</a></li>
+    <li><a href="#">UCI Worldtour</a></li>
+    <li><a href="#">Nations Cup</a></li>
+    <li><a href="#">America Tour</a></li>
 </div>
        </div>
        </section>

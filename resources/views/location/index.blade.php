@@ -69,7 +69,7 @@
                       <a href="{{$location->link}}" class="btn btn-primary">Click</a>
 
 
-                      @auth
+                      {{-- @auth
                       <a href="{{ route('location.edit', $location->id) }}" class="btn btn-primary">Edit</a>
 
                       <form action="{{ route('location.destroy', $location->id) }}" method="POST">
@@ -77,7 +77,7 @@
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">Delete</button>
                       </form>
-                      @endauth
+                      @endauth --}}
                     </div>
                   </div>
 
@@ -86,7 +86,7 @@
 
     </div>
 
-    <div class="pagination-links">
+    <div class="pagination-links pagination">
       {{ $locations->links() }}
   </div>
 

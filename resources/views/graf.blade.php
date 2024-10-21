@@ -28,6 +28,7 @@
     
     <nav class="navbar navbar-expand-lg bg-dark fixed-top">
         <div class="container-fluid">
+          
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarul" aria-controls="navbarul" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -37,31 +38,32 @@
                         <a class="nav-link" href="/">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/categories">CATEGORIES</a>
+                        <a class="nav-link" href="/location">FLAGS</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ url('/graf') }}" class="pdf-button nav-link">GRAF!</a>
+                      <a  href="{{ url('/graf') }}" class="pdf-button nav-link">GRAF!</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('generate.pdf') }}" class="pdf-button nav-link">Generate PDF</a>
+                      <a  href="{{ route('generate.pdf') }}" class="pdf-button nav-link">Generate PDF</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ url('/editor') }}" class="editor-button nav-link">Open Editor</a>
+                      <a href="{{ url('/editor') }}" class="editor-button nav-link">Open Editor</a>
                     </li>
                     @auth
                     <li class="mx-2 nav-item">
-                        <button onclick="location.href='/dashboard'" class="btn btn-primary">Dashboard</button>
+                      <button onclick="location.href='/dashboard'" class="btn btn-primary">Dashboard</button>
                     </li>
+
                     <li class="nav-item">
-                        <form method="POST" action="{{ route('logout') }}">
-                            @csrf
-                            <button class="btn btn-danger" type="submit">Logout</button>
-                        </form>
+                      <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button class="btn btn-danger" type="submit">Logout</button>
+                      </form>
                     </li>
                     @endauth
                 </ul>
             </div>
-        </div>
+        </div>\
     </nav>
 
    
@@ -110,6 +112,45 @@
 
   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+    html{
+        scroll-behavior: smooth;
+        scroll-padding: 6rem;
+        font-family: 'Montserrat', sans-serif;
+        color-scheme: dark light;
+        background-color: rgba(33,37,41,1);
+    }
+    body{
+      margin:0;
+      font-family: 'Montserrat', sans-serif;
+      font-weight:700;
+      line-height: 1.5;
+      background-color: rgba(33,37,41,1);
+    }
+    *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+}
+.navbar-nav .nav-item .nav-link{
+        position: relative;
+        padding-bottom: 10px;
+        color: white;
+        
+    }
+    @media (min-width: 992px){
+      .navbar-expand-lg .navbar-collapse{
+        display: flex !important;
+        flex-basis: auto;
+        flex-direction:column;
+        flex-wrap:wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+</style>
 </body>
 </html>
